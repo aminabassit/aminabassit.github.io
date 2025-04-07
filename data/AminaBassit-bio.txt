@@ -1,0 +1,2 @@
+Amina Bassit is a postdoctoral researcher in the Human Analysis Lab at Michigan State University (US). She received my Ph.D. degree from the University of Twente (NL) in ML-based biometric recognition and applied cryptography as part of the PriMa (Privacy Matters) project, a Marie Skłodowska-Curie funded EU's Horizon 2020 project. She won the EAB Industry Award 2024 for my Ph.D. dissertation, Fast and Accurate Biometric Search under Encryption. She is a Program Chair of the International Workshop on Biometrics and Forensics (IWBF 2025).
+

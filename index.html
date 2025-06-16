@@ -10,12 +10,107 @@
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- optional if CSS is separate -->
+    <style>
+      /* Reset & base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 100px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* NavBar styles */
+    .navbar {
+      background-color: #fddfe2;
+      color: white;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .navbar-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a {
+      color: black;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .nav-links a i {
+      margin-right: 6px;
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-padding-top: 80px;
+      scroll-behavior: smooth;
+    }
+    .contact-section {
+      background-color: #fddfe2;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .contact-section a {
+      margin: 10px;
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+    }
+
+    .contact-section a:hover {
+      color: #f58c97;
+    }
+    </style>
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="logo"> </div>
+      <nav class="nav-links">
+        <a href="#home"><i class="fa fa-home"></i> Home</a>
+        <a href="#research"><i class="fa fa-search"></i> Research</a>
+        <a href="#publications"><i class="fa-solid fa-pen-nib"></i> Publications</a>
+        <a href="#tutorials"><i class="fa fa-chalkboard-teacher"></i> Tutorials</a>
+        <a href="#activities"><i class="fas fa-clipboard-list"></i> Activities</a>
+        <a href="#contact"><i class="fa fa-envelope"></i> Contact</a>
+      </nav>
+    </div>
+  </header>
     
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <table id="home" style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -27,6 +122,7 @@
                 <p>
                   I am a postdoctoral researcher advised by <a href="https://vishnu.boddeti.net/">Vishnu Boddeti</a> in the <a href="https://hal.cse.msu.edu/">Human Analysis Lab</a> at Michigan State University (US). I received my Ph.D. degree from the University of Twente (NL) in ML-based biometric recognition and applied cryptography as part of the Marie Skłodowska-Curie funded <a href="https://www.prima-itn.eu/esr9/">PriMa (Privacy Matters) project</a>, under the supervision of <a href="https://scholar.google.de/citations?user=7BpMrY0AAAAJ">Raymond Veldhuis</a>, <a href="https://scholar.google.de/citations?user=ipKtYWgAAAAJ">Andreas Peter</a>, and <a href="https://scholar.google.de/citations?user=NOi0NlIAAAAJ">Florian Hahn</a>. I won the <a href="https://eab.org/award/hall_of_fame.html">EAB Industry Award 2024</a> for my Ph.D. dissertation, <a href="https://ris.utwente.nl/ws/portalfiles/portal/330980553/PhD_Thesis_AminaBassit-Final.pdf">Fast and Accurate Biometric Search under Encryption</a>. I am a Program Chair of the International Workshop on Biometrics and Forensics (<a href="https://www.unibw.de/iwbf2025/organisation">IWBF 2025</a>).
                 </p>
+                <br>
                 <p style="text-align: center;">
                   <a href="mailto:bassitam@msu.edu"><i class="fas fa-envelope" style="color: #f58c97;"></i> Email</a>&nbsp; &nbsp;
                   <a href="data/AminaBassit-CV.pdf"><i class="fas fa-file-alt" style="color: #f58c97;"></i> CV</a>&nbsp; &nbsp;
@@ -47,7 +143,7 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2><i class="fa-solid fa-magnifying-glass"></i> Research</h2>
+                <h2 id="research"><i class="fa-solid fa-magnifying-glass"></i> Research</h2>
                 <p>
                   My research mission is to ensure that AI technologies align with core human values, preserving fundamental rights in the digital world while protecting the intellectual property of businesses. I am passionate about integrating advanced ML and applied cryptography to design scalable, secure, and privacy-preserving solutions that build trust in AI technologies for both users and service providers.
                 </p>
@@ -57,10 +153,11 @@
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
     </tbody></table>
+
     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         <tr>
         <td style="padding:16px;width:100%;vertical-align:middle">
-          <h2><i class="fa-solid fa-pen-nib"></i> Publications</h2>
+          <h2 id="publications"><i class="fa-solid fa-pen-nib"></i> Publications</h2>
         </td>
       </tr>
     </tbody></table>
@@ -292,7 +389,7 @@
 					<table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
             <tr>
               <td>
-                <h2><i class="fas fa-clipboard-list"></i> Activities</h2>
+                <h2 id="activities"><i class="fas fa-clipboard-list"></i> Activities</h2>
               </td>
             </tr>
           </tbody></table>
@@ -302,7 +399,7 @@
             <tr>
               <td align="center" style="padding:16px; width:20; vertical-align:middle;">
                 <div class="colored-box" style="background-color: #fddfe2; height:100%; display:flex; align-items:center; justify-content:center;">
-                  <h2 style="margin:0;">Tutorials</h2>
+                  <h2 id="tutorials" style="margin:0;">Tutorials</h2>
 								 </div>
               </td>
               <td style="padding:8px;width:80%;vertical-align:middle">
@@ -402,7 +499,7 @@
             
           </tbody></table>
           
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:0px">
                 <br>
@@ -411,9 +508,35 @@
                 </p>
               </td>
             </tr>
-          </tbody></table>
+          </tbody>
+        </table> -->
         </td>
       </tr>
     </table>
+    <br><br><br>
+    <section id="contact" class="contact-section">
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <h2><i class="fa fa-envelope" style="color: black;"></i> Contact Me</h2>
+    <p style="margin: 10px 0 30px;">Feel free to reach out for collaborations, questions, or just to connect.</p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+      <a href="mailto:bassitam@msu.edu" style="text-decoration: none; color: black;">
+        <i class="fas fa-envelope" style="color: black"></i> Email
+      </a>
+      <a href="https://www.linkedin.com/in/amina-bassit-1197681b1" style="text-decoration: none; color: black;">
+        <i class="fab fa-linkedin" style="color: black;"></i> LinkedIn
+      </a>
+      <a href="https://github.com/aminabassit" style="text-decoration: none; color: black;">
+        <i class="fab fa-github" style="color: black;"></i> GitHub
+      </a>
+      <a href="https://hub.docker.com/repositories/aminabassit"><i class="fab fa-docker" style="text-decoration: none; color: black;"></i> DockerHub</a>
+    </div>
+    <br>
+    <p style="text-align:center;">
+      <a style="font-size:small;" href="https://github.com/jonbarron/jonbarron_website">Based on Jon Barron's website.</a>
+    </p>
+  </div>
+</section>
+
   </body>
 </html>
